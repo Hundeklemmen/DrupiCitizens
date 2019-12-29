@@ -1,0 +1,20 @@
+{
+	"name": "Citizens",
+	"version": "1.0.0",
+	"description": "API Component of Citizens for Drupi",
+	"main": "index.js",
+    "author": "Hundeklemmen",
+    "contributors": [
+        "SlickNicky10"
+    ],
+	"tags": [
+        "Citizens"
+	],
+	"dependencies": [
+        "PluginLoaded"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Hundeklemmen/DrupiCitizens"
+	}
+}
