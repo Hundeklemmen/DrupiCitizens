@@ -32,3 +32,56 @@ command.create("friend", "drupi", sender => {
 ```
 
 `Citizens.setSkin(npc, skin)` - change the skin of an already spawned NPC. You can use either a player name, or an object containing skin data, exactly the same as `Citizens.spawn`.
+
+
+´Citizens.on("event", handler)` - Listen to citizens events. Example:
+
+```js
+const Citizens = require("Citizens");
+var PluginLoaded = require("PluginLoaded");
+
+PluginLoaded("Citizens", ()=>{
+    Citizens.on("NPCRightClickEvent", event => {
+        event.getClicker().sendMessage("Npc ID: " + event.getNPC().getId());
+    })
+})
+```
+Events:
+- [CitizensDeserialiseMetaEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CitizensDeserialiseMetaEvent.html)
+- [CitizensDisableEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CitizensDisableEvent.html)
+- [CitizensEnableEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CitizensEnableEvent.html)
+- [CitizensPreReloadEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CitizensPreReloadEvent.html)
+- [CitizensReloadEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CitizensReloadEvent.html)
+- [CitizensSerialiseMetaEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CitizensSerialiseMetaEvent.html)
+- [CommandSenderCloneNPCEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CommandSenderCloneNPCEvent.html)
+- [CommandSenderCreateNPCEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/CommandSenderCreateNPCEvent.html)
+- [EntityTargetNPCEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/EntityTargetNPCEvent.html)
+- [NPCAddTraitEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCAddTraitEvent.html)
+- [NPCCloneEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCCloneEvent.html)
+- [NPCCollisionEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCCollisionEvent.html)
+- [NPCCombustByBlockEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCCombustByBlockEvent.html)
+- [NPCCombustByEntityEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCCombustByEntityEvent.html)
+- [NPCCombustEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCCombustEvent.html)
+- [NPCCreateEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCCreateEvent.html)
+- [NPCDamageByBlockEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCDamageByBlockEvent.html)
+- [NPCDamageByEntityEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCDamageByEntityEvent.html)
+- [NPCDamageEntityEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCDamageEntityEvent.html)
+- [NPCDamageEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCDamageEvent.html)
+- [NPCDeathEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCDeathEvent.html)
+- [NPCDespawnEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCDespawnEvent.html)
+- [NPCEnderTeleportEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCEnderTeleportEvent.html)
+- [NPCLeftClickEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCLeftClickEvent.html)
+- [NPCOpenDoorEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCOpenDoorEvent.html)
+- [NPCPushEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCPushEvent.html)
+- [NPCRemoveEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCRemoveEvent.html)
+- [NPCRemoveTraitEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCRemoveTraitEvent.html)
+- [NPCRightClickEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCRightClickEvent.html)
+- [NPCSelectEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCSelectEvent.html)
+- [NPCSpawnEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCSpawnEvent.html)
+- [NPCTeleportEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCTeleportEvent.html)
+- [NPCTraitCommandAttachEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCTraitCommandAttachEvent.html)
+- [NPCTraitEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/NPCTraitEvent.html)
+- [PlayerCloneNPCEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/PlayerCloneNPCEvent.html)
+- [PlayerCreateNPCEvent](https://jd.citizensnpcs.co/net/citizensnpcs/api/event/PlayerCreateNPCEvent.html)
+
+
