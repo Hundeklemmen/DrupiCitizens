@@ -1,5 +1,4 @@
-var PluginLoaded = require("PluginLoaded");
-PluginLoaded("Citizens", () => {
+require("PluginLoaded")("Citizens", () => {
     var Citizens = manager.loadExternal(manager.getPluginFile("Citizens"));
     var CitizensAPI = Citizens.loadClass("net.citizensnpcs.api.CitizensAPI");
     var registry = CitizensAPI.getDeclaredMethod("getNPCRegistry").invoke(null);
@@ -44,6 +43,7 @@ PluginLoaded("Citizens", () => {
                     skin.data
                 )
             }
-        }
-    }
+        },
+        on: (eventType, eventHandler) => event.addListenerExternal(Citizens.loadClass("net.citizensnpcs.api.event." + eventType), eventHandler)
+    };
 });
