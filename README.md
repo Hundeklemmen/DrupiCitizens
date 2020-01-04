@@ -34,7 +34,7 @@ command.create("friend", "drupi", sender => {
 `Citizens.setSkin(npc, skin)` - change the skin of an already spawned NPC. You can use either a player name, or an object containing skin data, exactly the same as `Citizens.spawn`.
 
 
-´Citizens.on("event", handler)` - Listen to citizens events. Example:
+`Citizens.on("event", handler)` - Listen to citizens events. Example:
 
 ```js
 const Citizens = require("Citizens");
